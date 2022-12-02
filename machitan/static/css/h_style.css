@@ -1,0 +1,92 @@
+@charset "UTF-8";
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: 0;
+    font-family: "游ゴシック";
+}
+
+body {
+    font-family: 'Noto Sans JP', sans-serif;
+    color: #222;
+}
+
+/* header
+------------------------------ */
+header {
+    width: 100vw;
+    background-color: rgb(165, 163, 166);
+    position: fixed;
+    height: 13vh;
+    
+}
+
+.wrapper {
+    width: 80%;
+    display: flex;
+    line-height: 100px;
+    margin: 0 auto;
+}
+
+.footerFixed{
+    min-height: 100vh;
+    position: relative;
+    padding-bottom: 60px;
+    box-sizing: border-box;
+}
+/*動物病院名前*/
+.aikon a {
+    font-size: 24px;
+    text-decoration: none;
+    color: #fff;
+}
+
+img {
+    width: 35px;
+    height: 30px;
+    margin-left: 5px;
+}
+/*ナビゲーションバー*/
+.navs {
+    display: flex;
+    list-style: none;
+}
+
+.navs li {
+    margin: 0 0 0 50px;
+    font-size: 18px;
+}
+
+.navs a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.navs a:hover {
+    color: black;
+    transition: 0.3s;
+}
+
+.contents {
+    text-align: center;
+    padding-top: 9vw;
+}
+
+
+/* footer
+-------------- */
+
+footer {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background: rgb(165, 163, 166);
+}
+
+.saigo {
+    color: #fff;
+    text-align: center;
+    font-size: small;
+}

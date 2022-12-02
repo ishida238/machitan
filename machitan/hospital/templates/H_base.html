@@ -1,0 +1,42 @@
+{% load static %}
+
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}{% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'css/h_style.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/ishida.css' %}">
+</head>
+<body>
+<!--ヘッダー-->
+<div class="footerFixed">
+    <header>
+        <div class="wrapper">
+            <h1 class="aikon">
+                <a href="#">まちたん！ラクラク予約</a>
+            </h1>
+            <nav class="usernav">
+                <ul class="navs">
+                    <li><a href="H_reserve.html">予約一覧</a></li>
+                    <li><a href="H_hospital_write.html">病院情報編集</a></li>
+                    <li><a href="H_inquiry.html">お客様相談</a></li>
+                    <li><a href="H_vax.html">ワクチン</a></li>
+                    <li><a href="H_my.html">マイページ</a></li>
+                    <li><a href="H_logout.html">ログアウト</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+<!--中身-->
+<div class="contents">
+{% block contents %}{% endblock %}
+</div>
+
+<!--フッター-->
+    <footer>
+        <p class="saigo">&copy; speedreserve . All Rights Reversed</p>
+    </footer>
+</div>
+</body>
+</html>

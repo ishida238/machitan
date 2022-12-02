@@ -1,0 +1,73 @@
+{% load static %}
+
+
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8">
+        <title>{% block title %}{% endblock %}</title>
+
+        <!-- ベースCSS -->
+        <link rel="stylesheet" href="{% static 'css/U_style.css' %}">
+        <!-- 個人CSS -->
+        <link rel="stylesheet" href="{% static 'css/hamada.css' %}" type="text/css">
+
+        {% block head %}{% endblock %}
+    </head>
+    <body>
+    <!--ヘッダー-->
+    <!-- 追加してみたやつ -->
+
+    <header>
+        <div class="wrapper">
+            <img src="{% static 'img/アイコンサンプル2.png' %}" alt="アイコン">
+
+            <a  class="logout" href="#">ログアウト</a>
+        </div>
+
+        <nav class="usernav">
+            <ul class="navs">
+                <li><a href="{% url 'hospital:index' %}">ホーム</a></li>
+                <li><a href="user.calender.html">オンライン受付</a></li>
+                <li><a href="user.rireki.html">予約履歴</a></li>
+                <li><a href="user.kiroku.html">成長記録</a></li>
+                <li><a href="#">マイページ</a></li>
+                <li><a href="user.inquiry.html">お問い合わせ</a></li>
+            </ul>
+        </nav>
+        </div>
+    </header>
+
+    <!--中身-->
+    {% block header %}{% endblock %}     
+    {% block contents %}{% endblock %}
+    <!--フッター-->
+        <footer>
+            <div class="erijo">
+                <div class="mei">
+                    <h1 class="f_aikon">○△□×病院</h1>
+                    <div class="joho">
+                        <h2 class="access">〒○○○-○○○○　石川県金沢市○○○○</h2>
+                        <h2 class="access">TEL ○○○-○○○○-○○○○</h2>
+                        <p>プライバシーポリシー</p>
+                    </div>
+                </div>
+                <table class="menu">
+                    <caption style="color:white">サイトマップ</caption>
+                        <tr>
+                            <td><a href="user.calender.html">オンライン受付</a></td>
+                            <td><a href="user.kiroku.html">成長記録</a></td>
+                            <td><a href="user.inquiry.html">お問い合わせ</a></td>
+                        </tr>
+                        <tr>
+                            <td><a href="user.rireki.html">予約履歴</a></td>
+                            <td><a href="user.hospitaljoho.html">病院情報</a></td>
+                            <td><a href="user.myp.html">マイページ</a></td>
+                        </tr>
+                </table>
+            </div>
+            <p class="saigo">&copy; speedreserve . All Rights Reversed</p>
+        </footer>
+    </div>
+    </body>
+</html>

@@ -1,0 +1,46 @@
+{% extends 'U_base.html' %}
+
+{% load static %}
+
+{% block title %}利用者トップ画面{% endblock %}
+
+{% block header %}
+
+{% endblock %}
+
+{% block contents %}
+<!-- <div class="yohaku">
+    
+<section class="news">
+    <div class="box1">
+        <h2>お知らせ</h2>
+    </div>
+    <dl>
+        {% for info in info_list %}
+        <dt>{{ info.created }}</dt>
+        <dd>{{ info.title }}</dd>
+        <dd>{{ info.contents }}</dd>
+        {% endfor %}
+    </dl>
+
+</section> 
+
+</div> -->
+<div class="yohaku">
+    <section class="news">
+        <div class="box1">
+            <h2>お知らせ</h2>
+        </div>
+        <dl>
+            {% for info in info_list %}
+            <dt>{{ info.created }}</dt>
+            <dd class="dd1">{{ info.title }}</dd>
+            <dd>{{ info.contents }}</dd>
+            {% endfor %}
+        </dl>
+    
+    </section> 
+
+</div>
+
+{% endblock %}

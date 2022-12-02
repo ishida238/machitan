@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="ja" dir="ltr">
+<head>
+<meta charset="utf-8">
+<title>ログアウト確認ページ</title>
+<link rel="stylesheet" href='{% static "css/logout.css" %}'/>
+
+</head>
+<body>
+<div class="logout">
+<h1>ログアウトしますか？</h1>
+
+<div class="reg">
+  <form method="post" action="#">
+    {% csrf_token %}
+    <ul>
+      <li>
+        <a class="nav-link" href="#">キャンセル</a>
+      </li>
+      <li>
+        <a class="nav-link" href="{% url 'account_logout' %}">ログアウトする</a>
+      </li>
+    </ul>
+ </form>
+</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="ja" dir="ltr">
+<head>
+<meta charset="utf-8">
+<title>ログアウト確認ページ</title>
+<link rel="stylesheet" href='{% static "css/A_logout_done.css" %}'/>
+
+</head>
+<body>
+<div class="logout">
+    <h1>ログアウトしました。</h1>
+    <a href="{% url 'account_login' %}">&lt&ltログインページへ</a>
+</div>
+</body>
+</html>
